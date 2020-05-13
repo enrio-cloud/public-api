@@ -1,3 +1,7 @@
+src
+tsconfig.json
+.idea/
+
 # Logs
 logs
 *.log
@@ -7,7 +11,7 @@ yarn-error.log*
 lerna-debug.log*
 
 # webstorm
-.idea/
+.idea
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

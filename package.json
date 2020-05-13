@@ -1,0 +1,25 @@
+{
+  "name": "enrio",
+  "version": "0.0.1",
+  "description": "Library to interact with the enrio.io widget",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build" : "tsc",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enrio-cloud/public-api.git"
+  },
+  "keywords": [
+    "enrio"
+  ],
+  "author": "Enrio",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.9.2"
+  }
+}
