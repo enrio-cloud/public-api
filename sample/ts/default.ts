@@ -2,7 +2,7 @@ import {Enrio} from '../../src';
 import {EnrioSubscriptionTypes} from '../../src/enrio-event-types';
 
 const enrio = new Enrio('Xcd1b1ee7-c14c-4daf-a778-cc026b93eac8');
-enrio.setup({}).then(x => {
+enrio.setup().then(() => {
     enrio.subscribe(EnrioSubscriptionTypes.ready, () => {
         console.log('Widget is ready to accept SDK calls');
     });
