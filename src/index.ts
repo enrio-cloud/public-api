@@ -18,6 +18,10 @@ export class Enrio {
         this.companyId = companyId;
     }
 
+    /*
+    The default setup method. This will inject the enrio widget into the page.
+    The promise is resolved when the widget is ready for initializing.
+     */
     public setup(settings?: EnrioSettings): Promise<void> {
         if (this.setupWasCalled && this.loadPromise) {
             return this.loadPromise;
@@ -66,6 +70,27 @@ export class Enrio {
      */
     public open(): void {
         window.Enrio.open();
+    }
+
+    /*
+    Closes the widget
+     */
+    public close(): void {
+        window.Enrio.close();
+    }
+
+    /*
+    Shows the widget launcher
+     */
+    public showLauncher(): void {
+        window.Enrio.showLauncher();
+    }
+
+    /*
+    Hides the widget launcher
+     */
+    public hideLauncher(): void {
+        window.Enrio.hideLauncher();
     }
 
     public subscribe(type: EnrioSubscriptionTypes, func: Function): EnrioSubscription {
