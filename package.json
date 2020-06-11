@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --build",
-    "test": "concurrently --kill-others \"npm run sample-server\" \"testcafe chrome tests/ -r nunit:concurrent.xml",
+    "test": "concurrently --kill-others \"npm run sample-server\" \"testcafe chrome tests/ -r nunit:tests.result.xml",
     "sample-server": "ts-node ./sample/app.ts --project ./sample/tsconfig.json",
     "sample": "npm run sample-server"
   },
