@@ -25,13 +25,12 @@
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "testcafe": "^1.8.6",
+    "testcafe-reporter-nunit": "^0.1.2",
+    "ts-loader": "^7.0.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.2",
     "webpack": "^4.43.0",
-    "webpack-dev-middleware": "^3.7.2",
-    "ts-loader": "^7.0.5"
+    "webpack-dev-middleware": "^3.7.2"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
