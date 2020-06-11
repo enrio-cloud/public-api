@@ -1,16 +1,14 @@
 {
   "name": "enrio",
-  "version": "0.0.2",
+  "version": "1.0.2",
   "description": "Library to interact with the enrio.io widget",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build",
-    "version": "npm run format && git add -A src",
+    "build": "tsc --build",
+    "test": "testcafe chrome tests/",
     "sample-server": "ts-node ./sample/app.ts --project ./sample/tsconfig.json",
-    "sample": "npm run sample-server",
-    "postversion": "git push && git push --tags"
+    "sample": "npm run sample-server"
   },
   "repository": {
     "type": "git",

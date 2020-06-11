@@ -7,7 +7,8 @@ function config() {
         mode: 'development',
         devtool: 'inline-source-map',
         entry: {
-            'default': './ts/default.ts'
+            'default': './ts/default.ts',
+            'initialize': './ts/initialize.ts'
         },
         target: 'web',
         context,

@@ -5,11 +5,13 @@
     "declaration": true,
     "outDir": "./lib",
     "strict": true,
-    "esModuleInterop": true
-
+    "esModuleInterop": true,
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"]
   },
   "include": [
-    "src"
+    "src",
+    "tests"
   ],
   "exclude": [
     "node_modules",

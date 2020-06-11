@@ -32,9 +32,17 @@ export class Enrio {
                 if (settings) {
                     window.Enrio.setSettings(settings);
                 }
-                window.Enrio.subscribe(EnrioSubscriptionTypes.initialize, () => {
-                    resolve();
-                });
+                //If auto start is disabled resolve the promise when it is ready for initialize
+                if(settings && settings.disableAutoStart) {
+                    window.Enrio.subscribe(EnrioSubscriptionTypes.initialize, () => {
+                        resolve();
+                    });
+                } else {
+                    //Resolve promise when it is ready to accept SDK calls
+                    window.Enrio.subscribe(EnrioSubscriptionTypes.ready, () => {
+                        resolve();
+                    });
+                }
             });
             // @ts-ignore
             window['_enrio'] || (window['_enrio'] = {});

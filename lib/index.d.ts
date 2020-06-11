@@ -15,9 +15,12 @@ export declare class Enrio {
     setup(settings?: EnrioSettings): Promise<void>;
     initialize(): void;
     open(): void;
+    close(): void;
+    showLauncher(): void;
+    hideLauncher(): void;
     subscribe(type: EnrioSubscriptionTypes, func: Function): EnrioSubscription;
     unsubscribe(subscription: EnrioSubscription): void;
-    private logToConsole;
+    private static logToConsole;
     /** @internal */
     setInDebugMode(): void;
 }
